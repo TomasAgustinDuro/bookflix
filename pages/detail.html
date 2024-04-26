@@ -3,61 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Detail</title>
+
+    <title><Details></Details></title>
 </head>
 <body>
-   <header>
-    <div class="content">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Details</a>
-            <a href="#">My list</a>
-            <a href="#">profile</a>
-            <a href="#">Recent</a>
-            <a href="#">Review</a>
-        </nav>
-    </div>
-</header>
- <div class="content-2">
-    <h1>El viento conoce mi nombre <br>Isasbel Allende</h1>
-        <img src="../imges/el-viento-conoce-mi-nombre.jpg" class="imga1" alt="">
-        <h2>Resumen y sinopsis</h2>
-            <p>Viena, 1938. Samuel Adler es un niño judío de seis años cuyo padre desaparece durante la Noche de los Cristales Rotos, en la que su familia lo pierde todo. Su madre, desesperada, le consigue una plaza en un tren que le llevará desde la Austria nazi hasta Inglaterra. Samuel emprende una nueva etapa con su fiel violín y con el peso de la soledad y la incertidumbre, que lo acompañarán siempre en su dilatada vida.</p>
-    </div>
-        <section class="contenedorautor">
-            <div class="cabecera">
-                <div class="nombre">
-                    <h2>Otros libros del autor</h2>
-                </div>
-                <div class="libro1">
-                <h3>Mas alla del Invierno</h3>
-                <img src="../imges/invierno.jpg" class="imga2" alt=""><br>
-                <button> + Info </button>
-            </div>
-            <div class="libro2">
-                <h3>Violeta</h3>
-                <img src="../imges/invierno.jpg" class="imga2" alt=""><br>
-                <button> + Info </button>          
-            </div>
-            <div class="libro3">
-                <h3>Largo petalo de mar</h3>
-                <img src="../imges/invierno.jpg" class="imga2" alt=""><br>
-                <button> + Info </button>          
-            </div>
-            </div> 
-        </section>
- <footer>
-    <div class="conteiner">
-        <div class="Redes">
-            <h4>Redes sociales</h4>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Youtube</a></li> 
+    <header class="contenedorh">
+        <div class="Buscador">
+            <input type="text" placeholder="Buscador">
         </div>
-    </div>
+        <div class="boton">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+<div class="contenedor-comienzo">
+        <div id="imagen1"></div>
+        <article class="presentacion">
+            <h1>Titulo del libro</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad nesciunt nulla dignissimos ipsum incidunt ea, iure eius cupiditate tempora. In consectetur cupiditate dolorum quia, blanditiis excepturi labore animi neque sed.</p>
+        </article>
+</div>
+    <section class="content">
+        <div class="content-coment">
+            <h2>Comentarios y opiniones de "Mas alla del invierno"</h2>
+            <article class="comentarios">
+                <h3>maria</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam tenetur totam reiciendis facere maxime enim officiis fugiat. Cupiditate sed asperiores est! Optio, reiciendis sit dolorem aliquam rem repellat architecto.</p>
+                <div class="imagenpuntuacion"></div>
+            </article>
+            <article class="comentarios">
+                <h3>pedro</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam tenetur totam reiciendis facere maxime enim officiis fugiat. Cupiditate sed asperiores est! Optio, reiciendis sit dolorem aliquam rem repellat architecto.</p>
+                <div id="imagenpuntuacion"></div>
+            </article>
+            <article class="comentarios">
+                <h3>juan</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam tenetur totam reiciendis facere maxime enim officiis fugiat. Cupiditate sed asperiores est! Optio, reiciendis sit dolorem aliquam rem repellat architecto.</p>
+                <div class="imagenpuntuacion"></div>
+            </article>
+        </div>   
+    </section>
+<div class="central">
+    <section class="libros">
+        <article class="libro1">
+            <a href="#">
+                <figure class="fg1">
+                    <img src="../imges/invierno.jpg" alt="">
+                </figure>
+            </a>
+            <div class="contenido-libro">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam omnis recusandae asperiores, quis vel iure voluptatem voluptatum possimus natus dolor tempore.</p>
+                <button>+ Info</button>
+            </div>
+        </article>
+        <article class="libro1">
+            <a href="#">
+                <figure class="fg1">
+                    <img src="../imges/el-viento-conoce-mi-nombre.jpg" alt="">
+                </figure>
+            </a>
+            <div class="contenido-libro">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam omnis recusandae asperiores, quis vel iure voluptatem voluptatum possimus natus dolor tempore.</p>
+                <button>+ Info</button>
+            </div>
+        </article>
+        <article class="libro1">
+            <a href="#">
+                <figure class="fg1">
+                    <img src="../imges/la suma.jpg" alt="">
+                </figure>
+            </a>
+            <div class="contenido-libro">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam omnis recusandae asperiores, quis vel iure voluptatem voluptatum possimus natus dolor tempore.</p>
+                <button>+ Info</button>
+            </div>
+        </article>
+        <article class="libro1">
+            <a href="#">
+                <figure class="fg1">
+                    <img src="../imges/el-juego-de-ripper.webp" alt="">
+                </figure>
+            </a>
+            <div class="contenido-libro">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam omnis recusandae asperiores, quis vel iure voluptatem voluptatum possimus natus dolor tempore.</p>
+                <button>+ Info</button>
+            </div>
+        </article>
+        <article class="libro1">
+            <a href="#">
+                <figure class="fg1">
+                    <img src="../imges/isaallende.jpg" alt="">
+                </figure>
+            </a>
+            <div class="contenido-libro">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam omnis recusandae asperiores, quis vel iure voluptatem voluptatum possimus natus dolor tempore.</p>
+                <button>+ Info</button>
+            </div>
+        </article>
+        <article class="libro1">
+            <a href="#">
+                <figure class="fg1">
+                    <img src="../imges/isaallende2.png" alt="">
+                </figure>
+            </a>
+            <div class="contenido-libro">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam omnis recusandae asperiores, quis vel iure voluptatem voluptatum possimus natus dolor tempore.</p>
+                <button>+ Info</button>
+            </div>
+        </article>
+    </section>
+</div>
+ <footer>
+    <footer>    
+        Footer
+    </footer>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="detail.html"><i class="fa-solid fa-star"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="my_list.html"><i class="fa-solid fa-heart"></i></a></li>
+            <li><a href="recent.html"><i class="fa-solid fa-list-check"></i></a></li>
+            <li><a href="review.html"><i class="fa-solid fa-glasses"></i></a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li>
+        </ul>
+    </nav>
+
+   
+<script src="https://kit.fontawesome.com/63ed2924ae.js" crossorigin="anonymous"></script>
  </footer>
 </body>
 </html>
