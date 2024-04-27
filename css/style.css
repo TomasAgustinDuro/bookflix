@@ -8,55 +8,89 @@
     font-family: "Reem Kufi Fun", sans-serif;
 }
 body{
-    background-color: #5f0609;
-    color: #FFFF;
+    background-color: #e0e6ae;
+    color: #000;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-/* media query
-@media screen and (min-width:1024px) {
-    .central{
-        max-width: 1025px;
-    }
-} */
-
 .contenedorh{
     width: 1200px;
-    height: auto;
-    background-color: #836868;
+    height: 60px;
+    background-color: #bdd3b6;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.main{
+    display: flex;
 }
 .contenedor-comienzo{
     width: 1200px;
-    height: auto;
-    background-color: #836868;
+    height: 500px;
+    display: flex;
+    border-top: 1px solid #5F0609;
+    background-image: url(../imges/books-5433432_1280.jpg);
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    min-height: 7ovh;
+    align-items: center;
 }
-#imagen1{
-    width: 350px;
-    height: 400px;
-    background-image: url(../imges/invierno.jpg);
+.titulo{
+    display: flex;
+    margin: 15px 15px;
+    padding: 15px 15px;
+    text-align: center;
+    justify-content: space-between;
+
+}
+.atributos{
+    display: flex;
     float: left;
     margin-bottom: 10px;
     margin-top: 30px;
     margin-top: 30px;
     margin-right: 10px;
+}
+#imagen1{
+    background-image: url(../imges/study-7332172_1280.png);
+    height: 450px;
     background-size:cover;
+    margin: 15px 15px;
+    flex: 1;
+}
+.atributos{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
 }
 .presentacion{
-    width: 400px;
-    height: 400px;
     margin: 15px 15px;
-    float: left;
-    box-sizing: border-box;
+    float: right;
     margin-top: 30px;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
 }
+.presentacion h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .content{
     width: 1200px;
     height: auto;
     margin: 0 auto;
     padding: 0 1em;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #5F0609;
     flex: auto;
     float: none;
     display:flex;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #5F0609;
 }
 .content-coment{
     width: 1200px;
@@ -73,11 +107,11 @@ h1{
 }
 .central{
     width: 1200px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #5F0609;
+    border-top: 1px solid #5F0609;
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 40px;
-    background-color: #ad2003;
     padding: 30px;
 }
 .otros-libros{
