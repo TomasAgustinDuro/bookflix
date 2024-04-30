@@ -40,18 +40,21 @@ body{
     display:flex;
     font-weight: 300;
     color: #fff;
-    border: 2px solid #000;
+    border-bottom: 1px solid #5F0609;
+}
+.imagen1{
+    width: 350px;
+    height: 400px;
+    display:flex;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 1s;
 
 }
-#imagen1{
-    height: 550px;
-    margin-top: 80px;
-    display:flex;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    
+.imagen1:hover{
+    scale: 1.2;
+    box-shadow: 0 0 10px #5F0609;
+
 }
 .atributos{
     width: 200px;
@@ -69,6 +72,7 @@ body{
     margin: 10px;
     display:block;
     text-align: center;
+  
 }
 .presentacion{
     width: 500px;
@@ -78,7 +82,6 @@ body{
     border: 2px solid #000;
 
 }
-
 .iconos{
     width: 250px;
     height: 70px;
@@ -86,6 +89,8 @@ body{
     display:block;
     color: #000;
     font-size: 30px;
+    opacity: 1;
+
 }
 .fa-bookmark{
     color:#e6dcdc;
@@ -113,27 +118,27 @@ body{
 }
 
 .content{
-    width: 1200px;
-    height: 400px;
-    margin-top: 60px;
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
     padding: 0 1em;
     border-bottom: 1px solid #5F0609;
-    flex: auto;
-    float: none;
-    display:block;
+    display:flex;
+    /* flex-wrap: wap; */
     text-align: center;
 
 }
 .content-coment{
     width: 1200px;
     height: auto;
-    display:inline;
-    margin: 15px;
-    padding: 15px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: 1px solid #5F0609;
+    
 }
 .comentarios{
     width: 900px;
-    height: 100px;
+    height: 150px;
     text-align: justify;
 }
 
@@ -146,71 +151,63 @@ h1{
 
 }
 
-@media screen and (min-width:52em) {
-    .centrado {
-        margin: 0 auto;
-        padding: 0 .8em;
+@media screen and (max-width:800px){
+    .centrado{
+        flex: 50%;
     }
-} /*fin media*/
 
+}
+
+@media screen and (max-width:600px){
+    .centrado{
+        flex: 100%;
+    }
+
+}
 .nombre-sitio {
     margin: 0 auto;
     padding: 1em 0;
     text-align: center;
     font-weight: 300;
     color: #000;
-}
-
-.card a:hover {
-    box-shadow: 3px 3px 8px #32c914;
-}
-
-.libro-content {
-    padding: 0;
 
 }
-
-.libro-content h2 {
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-weight: normal;
-}
-
-.libro-content p {
-    font-size: 90%;
- 
-}
-
-figure {
+figure{
     margin: 20px;
     padding: 0 auto;
 }
-
-img {
+.imag {
     display: block;
-    border: 0;
-    width: 90%;
+    width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0px 15px 25 rgb(0,0 0, .50em);
-    overflow: hidden;
 }
-
-/* empezamos con el flexbox */
-
+.imag:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px #5F0609;
+}
 .libros{
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    
 }
 .libro{
     margin-bottom: 2em;
     width: 20%;
 }
-    
+.libro-content {
+    padding: 0;
+}
+.libro-content h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+.libro-content p {
+    font-size: 90%;
+}
 button{
     font-size: 1em;
     font-weight: bold;
@@ -221,7 +218,6 @@ button{
     color:#000;
     background-color: #bdd3b6;
 }
-
 button:hover{
     background-color: #ad2003;
 }
@@ -234,7 +230,6 @@ button:hover{
     margin-right: auto;
     background-color: #5F0609;
 }
-
 .navbar ul{
     display: flex;
     flex-wrap: wrap;
@@ -243,7 +238,6 @@ button:hover{
     padding: 1.2em;
     gap: .5em;
 }
-
 .navbar li a{
     flex: 1 0 auto;
     text-align: center;
