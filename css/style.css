@@ -4,28 +4,26 @@
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     font-family: "Reem Kufi Fun", sans-serif;
+    text-decoration: none;
 }
 body{
     background-color: #e0e6ae;
     color: #000;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+
 }
 .contenedorh{
-    width: 1200px;
     height: 60px;
     background-color: #bdd3b6;
-    display: flex;
-    padding: 20px;
-    justify-content: center;
+    padding: 0;
+
 }
 .main{
     display: flex;
+
 }
 .contenedor-comienzo{
-    width: 1200px;
     height: 500px;
     display: flex;
     border-top: 1px solid #5F0609;
@@ -34,145 +32,185 @@ body{
     background-repeat: none;
     background-size: cover;
     min-height: 7ovh;
-    align-items: center;
+    align-items:center;
+    justify-content: center;
+
 }
 .titulo{
-    display: flex;
-    margin: 15px 15px;
-    padding: 15px 15px;
-    text-align: center;
-    justify-content: space-between;
+    display:flex;
+    font-weight: 300;
+    color: #fff;
+    border: 2px solid #000;
 
-}
-.atributos{
-    display: flex;
-    float: left;
-    margin-bottom: 10px;
-    margin-top: 30px;
-    margin-top: 30px;
-    margin-right: 10px;
 }
 #imagen1{
-    background-image: url(../imges/study-7332172_1280.png);
-    height: 450px;
-    background-size:cover;
-    margin: 15px 15px;
-    flex: 1;
+    height: 550px;
+    margin-top: 80px;
+    display:flex;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    
 }
 .atributos{
+    width: 200px;
+    margin: 0;
+    font-size: 12px;
+    border: 2px solid #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-}
-.presentacion{
-    margin: 15px 15px;
-    float: right;
-    margin-top: 30px;
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 
 }
-.presentacion h1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.atributos-p{
+    width: 110px;
+    border: 2px solid #000;
+    margin: 10px;
+    display:block;
+    text-align: center;
+}
+.presentacion{
+    width: 500px;
+    margin: 15px 15px;
+    display:flex;
+    color: #fff;
+    border: 2px solid #000;
+
+}
+
+.iconos{
+    width: 250px;
+    height: 70px;
+    border: 2px solid #000;
+    display:block;
+    color: #000;
+    font-size: 30px;
+}
+.fa-bookmark{
+    color:#e6dcdc;
+    margin: 5px;
+}
+.fa-heart{
+    color: #fff;
+    font-size: 30px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.fa-comment{
+    color: #fff;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.fa-check{
+    color: #fff;
+    font-size: 30px;
+    margin: 5px;
+}
+.fa-book{
+    color: #fff;
 }
 
 .content{
     width: 1200px;
-    height: auto;
-    margin: 0 auto;
+    height: 400px;
+    margin-top: 60px;
     padding: 0 1em;
-    border-top: 1px solid #5F0609;
+    border-bottom: 1px solid #5F0609;
     flex: auto;
     float: none;
-    display:flex;
-    border-bottom: 1px solid #5F0609;
+    display:block;
+    text-align: center;
+
 }
 .content-coment{
     width: 1200px;
     height: auto;
     display:inline;
+    margin: 15px;
+    padding: 15px;
 }
 .comentarios{
-    width: 1100px;
+    width: 900px;
     height: 100px;
+    text-align: justify;
 }
 
 h1{
     font-size: 30px;
 }
-.central{
-    width: 1200px;
-    border-bottom: 1px solid #5F0609;
-    border-top: 1px solid #5F0609;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 40px;
-    padding: 30px;
-}
-.otros-libros{
-    display: inline-flex;
+.centrado {
+    margin: 0 auto;
+    padding: 0 .8em;
 
 }
-.contenido-libro{
-    font-size: 20px;
 
-}
-.contendordecoment{
-    width: 900px;
-    height: 400px;
-}
-.comentarios{
-    font-size: 15px;
-}
+@media screen and (min-width:52em) {
+    .centrado {
+        margin: 0 auto;
+        padding: 0 .8em;
+    }
+} /*fin media*/
 
-.nombre-libro{
-    margin: 0 0 1em;
+.nombre-sitio {
+    margin: 0 auto;
     padding: 1em 0;
     text-align: center;
-    font-weight: 200px;
+    font-weight: 300;
+    color: #000;
 }
 
-.libro1 a{
-    text-decoration: none;
+.card a:hover {
+    box-shadow: 3px 3px 8px #32c914;
+}
+
+.libro-content {
+    padding: 0;
 
 }
-.libro1 a:hover{
-    box-shadow: 3px 3px 8px #836868;
-}
-.contenido-libro{
-    padding: 1,3em;
-}
-.contenido-libro h2{
+
+.libro-content h2 {
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: normal;
 }
 
-figure{
-    margin: 0;
-}
-img{
-    display: block;
-    border: 0;
-    width: 70%;
-    height: auto;
+.libro-content p {
+    font-size: 90%;
+ 
 }
 
+figure {
+    margin: 20px;
+    padding: 0 auto;
+}
+
+img {
+    display: block;
+    border: 0;
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 15px 25 rgb(0,0 0, .50em);
+    overflow: hidden;
+}
+
+/* empezamos con el flexbox */
+
 .libros{
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    text-align: center;
+    
 }
-.libro1{
+.libro{
     margin-bottom: 2em;
-    width: 33%;
+    width: 20%;
 }
+    
 button{
     font-size: 1em;
     font-weight: bold;
