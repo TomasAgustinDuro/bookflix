@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Reem Kufi Fun", sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: #bdd3b6;
+}
+
+.container-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem;
+}
+
+.logo-header {
+    width: auto;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.buscador{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    float: right;
+    transform: translate(-50%,-50%);
+}
+
+.buscador input {
+    position: absolute;
+    outline: none;
+    box-sizing: border-box;
+    height: 40px;
+    width: 0px;
+    padding: 0 20px;
+    color: #5F0609;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid #5F0609;
+    transition: all .7s ease;
+}
+
+::placeholder{
+    color: gray;
+}
+
+.boton{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #5F0609;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.boton i{
+    font-size: 20px;
+    color: white;
+    line-height: 15px;
+    transition: all .7 ease;
+}
+
+.buscador:hover input{
+    width: 150px;
+}
+
+.buscador:hover i{
+	transform: rotate(-360deg)
+}
+
+.boton:hover{
+	background: #5F0609;
+}
+
+.main {
+    width: 100%;
+    background-color: rgb(224, 230, 174);
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 320px;
+    padding-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-home {
+    color: rgb(95, 6, 9);
+    font-size: 28px;
+}
+
+.p-home {
+    color: rgb(95, 6, 9);
+    font-size: 23px;
+
+}
+
+.btn-home {
+    
+    margin-top: 16px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+    border-radius: 14px;
+    background-color: rgb(95, 6, 9);
+    color: white;
+    box-shadow: 0 0 8px rgba(95, 6, 9 0.733);
+    transition: 0.8s;
+}
+.btn-home:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: rgb(131, 104, 104);
+    border-color: rgb(131, 104, 104);
+
+}
+
+.div-seccion {
+    width: 100%;
+    text-align: center;
+    border-top: 4px solid;
+    border-color: #5f06098c;
+    padding-top: 35px;
+    padding-bottom: 80px;
+}
+
+.recientes {
+    padding-bottom: 130px;
+}
+
+.title-seccion {
+    color: rgb(95, 6, 9);
+    
+}
+
+.cont-libros {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 320px 320px 320px;
+    grid-gap: 40px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.cont-libro {
+    background-color: #5F0609;
+    box-shadow: 0 0 18px rgb(0, 0, 0);
+    width: 220px;
+    border-radius: 25px;
+}
+
+.libro {
+    width: 130px;
+    padding-top: 16px;
+}
+
+.title-libro {
+    padding-top: 10px;
+    color: white;
+}
+
+.puntuacion {
+    padding-top: 5px;
+    color: white;
+}
+
+.div-recientes {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #5F0609;
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1.2em;
+    gap: .5em;
+}
+
+.navbar li a{
+    flex: 1 0 auto;
+    text-align: center;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    text-decoration: none;
+    padding: .5em;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .title-home {
+        font-size: 38px;
+    }
+    
+    .p-home {
+        font-size: 33px;
+    
+    }
+    
+    .btn-home {
+        width: 120px;
+        height: 46px;
+        font-size: 16px;
+        border-radius: 15px
+    }
+
+    .home {
+        padding-top: 260px;
+    }
+
+    .div-seccion {
+        padding-top: 50px;
+    }
+
+    .cont-libros {
+        grid-template-rows: none;
+        grid-template-columns: 220px 220px 220px;
+        grid-gap: 50px;
+    }
+    
+    .cont-libro {
+        height: 320px;
+    }
+}
