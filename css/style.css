@@ -19,13 +19,12 @@ body{
     padding: 0;
 
 }
-.main{
-    display: flex;
+/* .main{
+    display: flex; */
 
-}
-.contenedor-comienzo{
+.detail-contenedor-comienzo{
     height: 500px;
-    display: flex;
+    /* display: flex; */
     border-top: 1px solid #5F0609;
     background-image: url(../imges/books-5433432_1280.jpg);
     background-position: center center;
@@ -36,11 +35,16 @@ body{
     justify-content: center;
 
 }
-.titulo{
-    display:flex;
+.detail-imagen-atributos{
+    display: flex;
+}
+#titulo1{
+    /* display:flex;
     font-weight: 300;
     color: #fff;
-    border-bottom: 1px solid #5F0609;
+    border-bottom: 1px solid #5F0609; */
+    text-align: center;
+    padding: .2em;
 }
 .imagen1{
     width: 350px;
