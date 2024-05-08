@@ -11,7 +11,7 @@
     <title>Details</title>
 </head>
 <body>
-    <header class="contenedorh">
+    <header class="detail-contenedor-header">
         <div class="Buscador">
             <input type="text" placeholder="Buscador">
         </div>
@@ -19,51 +19,50 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </header>
-    <main>
-        <div class="detail-contenedor-comienzo">
-            <h1 id="titulo1">Titulo del libro</h1>
-            <div class="detail-imagen-atributos">
-                <div class="imagen1">
-                    <img src="../imges/study-7332172_1280.png" alt="">
+    <main class="detail-contenedor-comienzo">
+        <div class="detail-img-atribu-descripcion">
+            <h1 id="detail-titulo1">Titulo del libro</h1>
+                <div>
+                    <img src="../imges/study-7332172_1280.png" class="imagen-principal" alt="img">
                 </div>
-                <div class="detail-atributos-article"><h2>editorial</h2>
-                    <h2>año de publicacion</h2>
-                    <h2>temas</h2>
-                    <h2>nota media</h2>
-                    <article class="presentacion"> 
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad nesciunt nulla dignissimos ipsum incidunt ea, iure eius cupiditate tempora. In consectetur cupiditate dolorum quia, blanditiis excepturi labore animi neque sed.</p>
-                    </article>
+                <div class="detail-atributos">
+                    <h2>año de publicacion: 2020</h2>
+                    <h2>temas: drama</h2>
+                    <h2>nota media: 8</h2>
+                    <h2>editorial: 12</h2>
                 </div>
-                <!-- <div class="atributos">           
-                </div> -->
-            </div>
-          
-            <div class="iconos">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <a href="#"><i class="fa-solid fa-comment"></i></a>
-                <a href="#"><i class="fa-solid fa-bookmark"></i></a>
-                <a href="#"><i class="fa-sharp fa-solid fa-check"></i></a>
-                <a href="#"><i class="fa-sharp fa-solid fa-book"></i></a>
-            </div>
+                <div class="detail-descripcion">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad nesciunt nulla dignissimos ipsum incidunt ea, iure eius cupiditate tempora. In consectetur cupiditate dolorum quia, blanditiis excepturi labore animi neque sed.</p>
+                </div>
+                <div class="detail-iconos">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-comment"></i></a>
+                    <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                    <a href="#"><i class="fa-sharp fa-solid fa-check"></i></a>
+                    <a href="#"><i class="fa-sharp fa-solid fa-book"></i></a>
+                </div>
+                
         </div>
     </main>
-    <section class="content">
-        <div class="content-coment">
+
+    <section class="detail-contenedor-comentarios">
+        <div class="detail-opiniones">
             <h2>Comentarios y opiniones de "Mas alla del invierno"</h2>
-            <article class="comentarios">
+            <article class="detail-comentarios">
                 <h3>Maria</h3> 
                 <h4>El viento conoce mi nombre</h4> 
                 <h6>24 de abril 2023</h6>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam tenetur totam reiciendis facere maxime enim officiis fugiat. Cupiditate sed asperiores est! Optio, reiciendis sit dolorem aliquam rem repellat architecto.</p>
                 <div><i class="fa-solid fa-user"></i></div>
-            <article class="comentarios">
+            </article>
+            <article class="-detail-comentarios">
                 <h3>Juan</h3> 
                 <h4>El viento conoce mi nombre</h4> 
                 <h6>24 de abril 2023</h6>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam tenetur totam reiciendis facere maxime enim officiis fugiat. Cupiditate sed asperiores est! Optio, reiciendis sit dolorem aliquam rem repellat architecto.</p>
                 <div><i class="fa-solid fa-user"></i></div>
             </article>
-            <article class="comentarios">
+            <article class="detail-comentarios">
                 <h3>Pedro</h3> 
                 <h4>El viento conoce mi nombre</h4> 
                 <h6>24 de abril 2023</h6>
@@ -72,65 +71,92 @@
             </article>
         </div>   
     </section>
-    <div class="cabecera">
-        <div class="centrado">
-            <div class="site-branding">
-                <h1 class="nombre-sitio"><span>Otros Libros del autor</span></h1>
+    <div class="">
+        <div class="detail-contenedor-libros">
+            <div class="detail-titulo3">
+                <h2><span>Otras lecturas recomendadas</span></h2></div>
             </div>
-            </div>
-        </div>
-    </div>
-    <div class="centrado">  
-            <section class="libros">
-                <article class="libro">
+    <div class="detail-contenedor-libros">  
+            <section class="detail-libros">
+                <article class="detail-libro">
                     <a href="#">
                         <figure>
-                            <img src="../imges/el-juego-de-ripper.webp" class="imag" alt="Imagen 1">
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 1">
                         </figure>
                     </a>
-                    <div class="libro-content"> 
                         <button>+ Info</button>
-                    </div>
                 </article>
-                <article class="libro">
+                <article class="detail-libro">
                     <a href="#">
                         <figure>
-                            <img src="../imges/invierno.jpg" class="imag" alt="Imagen 2">
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 2">
                         </figure>
                     </a>
-                    <div class="libro-content"> 
                         <button>+ Info</button>
-                    </div>
                 </article>
-                <article class="libro">
+                <article class="detail-libro">
                     <a href="#">
                         <figure>
-                            <img src="../imges/la suma.jpg" class="imag" alt="Imagen 3">
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 3">
                         </figure>
                     </a>
-                    <div class="libro-content"> 
                         <button>+ Info</button>
-                    </div>
                 </article>
-                <article class="libro">
+                <article class="detail-libro">
                     <a href="#">
                         <figure>
-                            <img src="../imges/invierno.jpg" class="imag" alt="Imagen 4">
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
                         </figure>
                     </a>
-                    <div class="libro-content">
                         <button>+ Info</button>
-                    </div>
                 </article>
-                <article class="libro">
+                <article class="detail-libro">
                     <a href="#">
                         <figure>
-                            <img src="../imges/isaallende.jpg" class="imag" alt="Imagen 4">
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
                         </figure>
                     </a>
-                    <div class="libro-content"> 
                         <button>+ Info</button>
-                    </div>
+                </article>
+                <article class="detail-libro">
+                    <a href="#">
+                        <figure>
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
+                        </figure>
+                    </a>
+                        <button>+ Info</button>
+                </article>
+                <article class="detail-libro">
+                    <a href="#">
+                        <figure>
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
+                        </figure>
+                    </a>
+                        <button>+ Info</button>
+                </article>
+                <article class="detail-libro">
+                    <a href="#">
+                        <figure>
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
+                        </figure>
+                    </a>
+                        <button>+ Info</button>
+                </article>
+                <article class="detail-libro">
+                    <a href="#">
+                        <figure>
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
+                        </figure>
+                    </a>
+                        <button>+ Info</button>
+                </article>
+                <article class="detail-libro">
+                    <a href="#">
+                        <figure>
+                            <img src="../imges/study-7332172_1280.png" class="imag" alt="Imagen 4">
+                        </figure>
+                    </a>
+                        <button>+ Info</button>
                 </article>
             </section>
     </div>
