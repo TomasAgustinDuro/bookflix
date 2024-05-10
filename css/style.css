@@ -178,8 +178,6 @@ h1{
     max-width: 70%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-
-
 /*  */
 
 
@@ -213,15 +211,14 @@ h1{
     margin-left: auto;
     margin-right: auto;
     background-color: #5F0609;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, .5); 
 }
-
 .navbar ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     list-style-type: none;
     padding: 1.2em;
-    gap: .5em;
 }
 
 .navbar li a{
@@ -236,9 +233,123 @@ h1{
 
 /*  */
 
+/* Profile */
+
+.buscador{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    float: right;
+    transform: translate(-50%,-50%);
+}
+.buscador input {
+    position: absolute;
+    box-sizing: border-box;
+    height: 40px;
+    width: 0px;
+    padding: 0 20px;
+    color: #5F0609;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid #5F0609;
+    transition: all .7s ease;
+}
+
+::placeholder{
+    color: gray;
+}
+
+.boton{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #5F0609;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+   
+}
+
+.boton i{
+    font-size: 20px;
+    color: white;
+    line-height: 15px;
+    transition: all .7 ease;
+}
+
+.buscador:hover input{
+    width: 150px;
+}
+
+.buscador:hover i{
+	transform: rotate(-360deg)
+    /* animation: rotateIn; */
+}
+
+.boton:hover{
+	background: #5F0609;
+   
+}
+
+.info-personal,
+.soporte {
+    background-color: #5F0609;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em 0;
+}
+
+.info-personal h3,
+.soporte h3 {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.info-personal .detalle p {
+    margin-bottom: .5em;
+}
+
+/* ESTILO CARDS MI LISTA */
+
+.cards-lista-sm{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.card {
+    background: #5F0609;
+    margin: 1em auto;
+    border-radius: 10px;
+    font-size: .8em;
+    color:white;
+}
+.card p{
+    padding: .8em
+}
+
+.card img{
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 60%;
+}
+
 /* Responsive */
 
 @media screen and (min-width: 768px) {
+    
+    .navbar li a {
+        padding: .7em 5em;
+    }
+
+    a:hover {
+        background-color: #8C0B13;
+    }
 
     /* about */
 
@@ -273,22 +384,46 @@ h1{
 
 
     /* Reseñas */
-
     #resenia-h3{
         font-size: 2em;
     }
-
     .resenia-contenedor img {
         width: 20%;
     }
-
     .resenia-contenedor-reseñas {
         width: 60%;
     }
-
     .resenia-form{
         width: 50%;
     }
-
     /*  */
+
+    .info-personal{
+        width: 50%;
+        margin: 1em auto;
+    }
+
+    .soporte {
+        width: 25%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .mi-lista{
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .cards-lista-sm{
+        display: flex;
+    }
+
+    .card {
+        border: solid 1px green;
+        width: 20%;
+        font-size: 1em;
+    }
+
+
 }
