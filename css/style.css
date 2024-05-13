@@ -12,7 +12,7 @@
     width: 100%;
     display: flex;
 }
-.container{
+.detail-container{
     background-image:linear-gradient(rgba(5, 7, 12, .6),rgba(5, 7, 12, .6), rgba(7, 7, 12, .6)), url(../img/biblioteca1.jpg);
     background-position: center center;
     background-repeat: none;

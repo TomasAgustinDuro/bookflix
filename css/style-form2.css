@@ -16,7 +16,6 @@ form{
     text-align: center;
     width: 340px;
     background-color: #5f0609;
-    
 }
 
 .input-group{
@@ -28,15 +27,13 @@ form{
 h2{
     color: #fff;
     font-size: 25px;
-
 }
 
 label{
     color:#fff;
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px;   
 }
 
 input, textarea, select{
@@ -46,5 +43,4 @@ input, textarea, select{
     background-color: #bdd386;
     border:2px solid #ad2003;
     outline: none;
-
 }
