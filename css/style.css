@@ -1,3 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Reem Kufi Fun", sans-serif;
+    text-decoration: none;
+}
+
+.detail-contenedor-header{
+    height: 60px;
+    background-color: #c2c995;
+    padding: 0;
+    display: flex;
+}
+
+.detail-contenedor-comienzo{
+    width: 100%;
+    height: 500px;
+    background-image:linear-gradient(rgba(5, 7, 12, .6),rgba(5, 7, 12, .6), rgba(7, 7, 12, .6)), url(../img/biblioteca1.jpg);
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+    display: block;
+   
+}
+
+#detail-titulo1{
+    width: 460px;
+    height: 70px;
+    font-size: 35px;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    right:260px;
+    top: 10px;
+}
+
+.imagen-principal{
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    border: 1px solid #5F0609;
+    cursor: pointer;
+    filter:drop-shadow(0px 7px 21px #5f0609);
+    position: absolute;
+    left: 130px;
+    top:0px;
+
+}
+
+.imagen-principal:hover{
+    scale: 1.1;
+    box-shadow: 0 0 15px #5F0609;
+}
+
+.atributo1{
+    width: 150px;
+    height: 60px;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+.atributos{
+    display: flex;
+    position: absolute;
+    right: 150px;
+    top: 120px;
+    flex-direction: row;
+}
+
+
+.detail-descripcion{
+    width: 400px;
+    height: 150px;
+    color: #fff;
+    position: absolute;
+    top:230px;
+    right: 300px;
+    opacity: 80%;
+    font-size: 17px;
+    text-align: justify;
+
+}
+
+.detail-iconos{
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    align-items:end;
+    display: flex;
+    position:absolute;
+    bottom: 5px;
+    right: 30px;
+}
+
+.detail-contenedor-comentarios{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #5F0609;
+    background-color: #c2c995;
+    text-align:justify;
+   
+}
+
+.detail-opiniones{
+    width: 90%;
+    height:auto;
+    margin-bottom: 40px;
+}
+
+.detail-contenedor-comentarios .detail-opiniones h2{
+    margin-top: 25px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.detail-otros{
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #5f0609;
+    background-color: #c2c995 ;
+    display: block;
+    text-align: center;
+    align-content: space-around;
+
+}
+.detail-otros h2{
+    font-size: 30px;
+    margin-top: 15px;
+    opacity: 90%;
+}
+.detail-otros-libros-autor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    text-align: center;
+}
+
+.imagen2{
+    width: 160px;
+    margin-bottom: 10px;
+    display: flex;
+    border-radius: 15px;
+}
+.imagen2:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px #5F0609;
+}
+
+.detail-contenedor-libros{
+    margin: 0 auto;
+    padding: .8em;
+    background-image:linear-gradient(rgba(5, 7, 12, .6),rgba(5, 7, 12, .6), rgba(7, 7, 12, .6)), url(../img/biblioteca2.jpg);
+    display: block;
+    text-align: center;
+    background-color: #c2c995;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.detail-contenedor-libros h2{
+    font-size: 30px;
+    color: #000;
+}
+
+figure{
+    margin: 20px;
+    padding: 0 auto;
+}
+
+.imagen3{
+    display: flex;
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.imagen3:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px #5F0609;
+}
+
+.detail-libros{
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    text-align: center;
+    align-content: space-around;
+}
+.detail-libro{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 25%;
+    min-width: 300px;
+}
+
+.button1{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+    color:#000;
+    background-color: #bdd3b6;
+
+}
+
+.button1:hover{
+    background-color: #ad2003;
+}
+
+.button2{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 2px solid rgb(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+    color:#000;
+    background-color: #bdd3b6;
+}
+.button2:hover{
+    background-color: #ad2003;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -292,3 +530,4 @@ h1{
 
     /*  */
 }
+

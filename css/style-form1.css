@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color:#c2c995;
+  }
+  
+  .formulario {
+    width: 400px;
+    background-image:linear-gradient(rgba(5, 7, 12, .6),rgba(5, 7, 12, .6), rgba(7, 7, 12, .6)), url(../img/biblioteca3.jpg);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  
+  .formulario h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .controles {
+    width: 100%;
+    background: #5f0609;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #ad2003;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+  }
+  
+  .formulario p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .formulario a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .formulario a:hover {
+    color: #ad2003;
+    text-decoration: underline;
+  }
