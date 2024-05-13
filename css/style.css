@@ -33,7 +33,6 @@
     font-size: 35px;
     justify-content: center;
     color: #fff;
-    border: 1px solid #fff;
     position: absolute;
     right:260px;
     top: 10px;
@@ -74,20 +73,17 @@
     flex-direction: row;
 }
 
-.detail-descripcion p{
-    font-size: 18px;
-    text-align:justify;
-    opacity:80%;
-}
 
 .detail-descripcion{
     width: 400px;
-    height: 180px;
+    height: 150px;
     color: #fff;
-    border: 1px solid #fff;
     position: absolute;
     top:230px;
     right: 300px;
+    opacity: 80%;
+    font-size: 17px;
+    text-align: justify;
 
 }
 
@@ -97,7 +93,6 @@
     font-size: 30px;
     align-items:end;
     display: flex;
-    border: 1px solid #fff;
     position:absolute;
     bottom: 5px;
     right: 30px;
@@ -242,7 +237,7 @@ figure{
 }
 
 .navbar {
-    position: fixed;
+    position: sticky;
     left: 0;
     right: 0;
     bottom: 0;
@@ -269,18 +264,3 @@ figure{
     padding: .5em;
     color: white;
 }
-
-/*A partir de acá empiezo el responsive*/
-
-
-@media screen and (min-width:300px) {
-    .detail-contenedor-comienzo{
-        margin: 0 auto;
-        padding: 0 .8em;
-        display:flex;
-        flex-wrap: wrap;
-        min-width: 300px;
-    }
-   
-}
-
