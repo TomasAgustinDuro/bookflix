@@ -214,3 +214,31 @@ figure{
     background-color: #ad2003;
 }
 
+.navbar {
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #5F0609;
+}
+
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1.2em;
+    gap: .5em;
+}
+
+.navbar li a{
+    flex: 1 0 auto;
+    text-align: center;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    text-decoration: none;
+    padding: .5em;
+    color: white;
+}
