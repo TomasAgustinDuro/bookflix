@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style-form2.css">
+    <title>formulario2 cargar libros</title>
+</head>
+<body>
+    <form>
+        <h2>Encontra tus libros favoritos</h2><br>
+        <div class="input-group">
+            <label for="name">Nombre del libro:</label>
+            <input type="text" name="name" id="name">
+            <label for="autor">Nombre del autor:</label>
+            <input type="text" name="autor" id="autor">
+            <label for="año">Año de publicacion:</label>
+            <input type="number" name="año" id="año" value="1998">
+            <label for="genero">Genero del libro:</label>
+            <select name="genero">
+                <option value="dramatica">Dramatica</option>
+                <option value="Narrativa">Narrativa</option>
+                <option value="poetico">Poetico</option>
+                <option value="Didactico">Didactico</option>
+                <option value="novela">Novela</option>
+                <option value="fabula">Fabula</option>
+            </select>
+            <label for="comentarios">Pequeña descripcion del libro:</label>
+            <textarea name="comentarios" rows="8" cols="10">escriba aquí:</textarea><br>
+            <input class="btn" type="submit" name="buscar" value="Buscar">
+        </div>
+    </form>
+</body>
+</html>
