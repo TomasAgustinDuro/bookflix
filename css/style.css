@@ -27,6 +27,101 @@ header, footer{
   justify-content: space-between;
 }
 
+/* body {
+  background-color:#c2c995;
+  font-family: "Reem Kufi Fun", sans-serif;
+  border-radius: 20px;
+
+} */
+
+.formulario {
+  width: 90%;
+  background-image:linear-gradient(rgba(5, 7, 12, .4),rgba(5, 7, 12, .4), rgba(7, 7, 12, .4)), url(../img/biblioteca3.jpg);
+  padding: 30px;
+  margin: 1.5em auto;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: 7px 13px 37px #000;
+  text-align: center;
+}
+
+.busqueda-form{
+  padding: 50px 55px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  text-align: center;
+  width: 75%;
+  margin:1em auto;
+  background-color: #5f0609;
+}
+
+#busqueda-main {
+  background-image:linear-gradient(rgba(5, 7, 12, .6),rgba(5, 7, 12, .6), rgba(7, 7, 12, .6)), url(../img/biblioteca4.jpg);
+}
+
+.busqueda-input-group{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.busqueda-form h2{
+  color: #fff;
+  font-size: 25px;
+}
+
+.busqueda-input-group label{
+  color:#fff;
+  font-size: 15px;
+  font-weight: 600;  
+}
+
+.busqueda-input-group input, textarea, select{
+  padding: 15px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #bdd386;
+  border:2px solid #ad2003;
+  outline: none;
+  resize: none;
+}
+
+.formulario h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controles {
+  width: 100%;
+  background: #5f0609;
+  padding: 10px;
+  border-radius: 4px;
+  margin: .5em auto;
+  border: 1px solid #ad2003;
+  font-family: "Reem Kufi Fun", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+label{
+  border-radius: 25px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.formulario a {
+  color: #fff;
+}
+
+
+.genero {
+  margin: 1em;
+}
+
+.formulario a:hover {
+  text-decoration: underline;
+}
 
 .detail-container {
   background-image: linear-gradient(
@@ -626,5 +721,12 @@ figure {
     width: 50%;
   }
 
+  .formulario {
+    width: 30%;
+  }
+
+  .busqueda-form{
+    width: 30%;
+  }
 
 }
