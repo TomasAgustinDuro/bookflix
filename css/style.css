@@ -685,6 +685,40 @@ figure {
 
 /*  */
 
+/* Login */
+
+.form-login {
+  width: 300px;
+  margin: 1em auto;
+  padding: 2em;
+  background-color: #5f0609;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+.form-login input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  background-color:#e0e6ae;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 1em;
+}
+.form-login input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/*  */
+
 /* Profile */
 .cards-lista-sm {
   display: grid;
@@ -833,6 +867,13 @@ figure {
   }
   /*  */
 
+  /* Login */
+
+  .form-login {
+    width: 30%
+  }
+
+  /*  */
   /* about */
 
   .about-contenedor {
