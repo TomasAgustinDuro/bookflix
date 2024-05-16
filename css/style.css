@@ -13,7 +13,6 @@ body {
   height: 100vh;
 }
 
-
 header {
   background-color: #bdd3b6;
   width: 100%;
@@ -120,7 +119,7 @@ header {
 
 .home-libro {
   width: 130px;
-  height: 70%
+  height: 70%;
 }
 
 .home-title-libro {
@@ -214,22 +213,26 @@ header {
   text-align: center;
 }
 
-.registro-controles {
+.formulario-registro .registro-controles {
   width: 100%;
   background: #5f0609;
   padding: 10px;
   border-radius: 4px;
   margin: 0.5em auto;
   border: 1px solid #ad2003;
-  font-family: "Reem Kufi Fun", sans-serif;
   font-size: 18px;
   color: #fff;
 }
 
-label {
+.formulario-registro label {
   border-radius: 25px;
   font-weight: 400;
   margin-right: 10px;
+}
+
+.formulario-registro input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .formulario-registro a {
@@ -238,11 +241,41 @@ label {
 
 .formulario-registro .genero {
   margin: 1em;
+  justify-content: center;
+  display: flex;
 }
 
 .formulario-registro a:hover {
   text-decoration: underline;
 }
+
+.terminos-envio {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.terminos-envio button {
+  width: 50%;
+  background-color: #5f0609;
+  margin: 1em auto;
+  color: white;
+}
+
+.condiciones-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+#btn-registro{
+  background-color: #5f0609;
+  color: white;
+  padding: .5em;
+  font-size: 1.3em;
+}
+
 
 /*  */
 
@@ -492,7 +525,6 @@ figure {
   color: #e0e6ae;
 }
 
-
 /*  */
 
 /* Pgina de resenias */
@@ -589,7 +621,7 @@ figure {
   margin-bottom: 30px;
 }
 
-.about-contenedor{
+.about-contenedor {
   padding: 2em 1em;
 }
 
@@ -695,6 +727,7 @@ figure {
   border-radius: 20px;
   color: white;
   text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .form-login input[type="text"],
@@ -707,7 +740,7 @@ figure {
 .form-login input[type="submit"] {
   width: 50%;
   padding: 10px;
-  background-color:#e0e6ae;
+  background-color: #e0e6ae;
   color: black;
   border: none;
   cursor: pointer;
@@ -790,7 +823,6 @@ figure {
   font-size: 2em;
 }
 
-
 /* Responsive */
 
 @media screen and (min-width: 768px) {
@@ -823,8 +855,8 @@ figure {
   .home-cont-libro {
     height: 320px;
   }
-  
-  .footer-container{
+
+  .footer-container {
     width: 100%;
     height: 110px;
     background-color: #bdd3b6;
@@ -870,7 +902,7 @@ figure {
   /* Login */
 
   .form-login {
-    width: 30%
+    width: 30%;
   }
 
   /*  */
@@ -986,7 +1018,7 @@ figure {
 
   /* Formulario registro */
 
-  .formulario {
+  .formulario-registro {
     width: 30%;
   }
 
@@ -997,7 +1029,5 @@ figure {
   .busqueda-form {
     width: 30%;
   }
-
   /*  */
 }
-

@@ -7,8 +7,8 @@
       href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Registro</title>
   </head>
   <body>
     <header>
@@ -32,35 +32,35 @@
             placeholder="Ingrese su nombre"
           />
           <input
-            class="controles"
+            class="registro-controles"
             type="text"
             name="apellidos"
             id="apellidos"
             placeholder="Ingrese su apellido"
           />
           <input
-            class="controles"
+            class="registro-controles"
             type="date"
             name="fecha"
             id="fecha"
             placeholder="dd/mm/aaaa"
           />
           <input
-            class="controles"
+            class="registro-controles"
             type="email"
             name="correo"
             id="correo"
             placeholder="Ingrese su correo"
           />
           <input
-            class="controles"
+            class="registro-controles"
             type="password"
             name="contrasenia"
             id="contrasenia"
             placeholder="Ingrese una contraseña"
           />
           <div>
-            <select class="controles" name="pais" placeholder="País">
+            <select class="registro-controles" id="pais" name="pais" placeholder="País">
               <option value="1">Argentina</option>
               <option value="2">Bolivia</option>
               <option value="3">Brasil</option>
@@ -74,7 +74,7 @@
               <option value="11">Venezuela</option>
             </select>
           </div>
-
+      
           <div class="genero">
             <input type="radio" id="hombre" name="sexo" />
             <label for="hombre">Hombre</label>
@@ -83,16 +83,19 @@
             <input type="radio" id="otro" name="sexo" />
             <label for="otro">Otro</label>
           </div>
+      
 
-          <input type="checkbox" id="condiciones" value="1" />
-          <label for="condiciones"
-            ><a href="#">Acepto términos y condiciones</a></label
-          >
-
-          <input class="controles" type="submit" value="Registrarse" />
+         <div class="terminos-envio">
+            <div class="condiciones-container">
+              <input type="checkbox" id="condiciones" value="1" />
+              <label for="condiciones"><a href="#">Acepto términos y condiciones</a></label>
+            </div>     
+          <button class="controles" id="btn-registro" value="Registrarse">Registrarse</button>
           <a href="#">¿Aún no tienes cuenta?</a>
+         </div>
         </section>
       </form>
+      
     </main>
     <footer>
       <div class="footer-container">
@@ -118,5 +121,11 @@
           <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li>
       </ul>
   </nav>
+
+  <script src="../main/main.js"></script>
+  <script
+  src="https://kit.fontawesome.com/63ed2924ae.js"
+  crossorigin="anonymous"
+></script>
   </body>
 </html>
