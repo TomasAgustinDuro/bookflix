@@ -22,6 +22,7 @@
     </header>
     <main>
       <form>
+        <script src="validar.js"></script>
         <section class="formulario-registro">
           <h4>Formulario Registro</h4>
           <input
@@ -89,7 +90,7 @@
             ><a href="#">Acepto términos y condiciones</a></label
           >
 
-          <input class="controles" type="submit" value="Registrarse" />
+          <input class="controles" type="submit" value="Registrarse" onsubmit="return validar();" />
           <a href="#">¿Aún no tienes cuenta?</a>
         </section>
       </form>
