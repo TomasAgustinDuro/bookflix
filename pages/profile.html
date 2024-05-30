@@ -14,6 +14,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="" href="img/icons8-gafas-30.png">
+
     <title>Mi perfil</title>
   </head>
   <body>
@@ -31,11 +33,11 @@
       <div class="info-personal">
         <h3>Información personal</h3>
         <section class="detalle">
-          <p><strong>Alias:</strong>  juanp123</p>
-          <p><strong>Nombre:</strong>  Juan</p>
-          <p><strong>Correo:</strong>  ejemplo@yahoo.com</p>
-          <p><strong>Contraseña:</strong>  ******</p>
-        </section>
+          <p><strong>Nombre:</strong> <span id="profile-nombre"></span></p>
+          <p><strong>Correo:</strong> <span id="profile-correo"></span></p>
+          <p><strong>Contraseña:</strong> <span id="profile-password" class="censored"></span></p>
+      </section>
+      
       </div>
       <div class="profile-recientes">
         <h2>Mi lista</h2>
@@ -52,6 +54,7 @@
               excepturi sequi facilis.
             </p>
           </div>
+
           <div class="card">
             <img
               src="../img/la-casa-de-los-espiritus.jpg"
@@ -64,6 +67,7 @@
               provident tempora ex ipsam.
             </p>
           </div>
+
           <div class="card">
             <img src="../img/el-dia-de-los-trifidos.jpg" alt="river-god" />
             <p>
@@ -73,6 +77,7 @@
               quibusdam alias!
             </p>
           </div>
+
           <div class="card">
             <img
               src="../img/el-dia-de-los-trifidos.jpg"
@@ -85,6 +90,7 @@
               excepturi sequi facilis.
             </p>
           </div>
+
           <div class="card">
             <img
               src="../img/la-casa-de-los-espiritus.jpg"
@@ -97,13 +103,15 @@
               provident tempora ex ipsam.
             </p>
           </div>
+          
         </div>
       </div>
       <div class="soporte">
         <h3>Soporte</h3>
         <p>Centro de ayuda</p>
         <p>Contacto</p>
-        <p>Eliminar mi cuenta</p>
+        <p><a href="" class="cerrar-sesion">Cerrar sesion</a></p>
+        <p><a href="" id="profile-link-eliminar">Eliminar mi cuenta</a></p>
       </div>
     </main>
     <footer>
@@ -123,13 +131,14 @@
     <ul>
         <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
         <li><a href="detail.html"><i class="fa-solid fa-star"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
         <li><a href="recent.html"><i class="fa-solid fa-list-check"></i></a></li>
         <li><a href="review.html"><i class="fa-solid fa-glasses"></i></a></li>
         <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
     </ul>
 </nav>
-  </nav>
+
+    <script src="../main/main.js"></script>  
     <script
       src="https://kit.fontawesome.com/63ed2924ae.js"
       crossorigin="anonymous"
