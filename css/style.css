@@ -302,6 +302,10 @@ a {
   padding: 1em;
 }
 
+#descripcion-libro {
+  color: white;
+}
+
 .detail-container h1 {
   color: #c2c995;
 }
@@ -604,6 +608,12 @@ figure {
   width: 60%;
   border-radius: 4px;
   margin: 1em auto;
+}
+
+
+.recientes-contenedor > * {
+  margin: 2em auto;
+  text-align: center;
 }
 
 .reciente-libro img {
@@ -940,12 +950,16 @@ figure {
 
   /* Recientes pc */
   .recientes-contenedor {
-    display: flex;
-    width: 60%;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 2em;
+    gap: 2em;
   }
-  .reciente-libro {
-    width: 30%;
+
+  .recientes-contenedor > * {
+    margin: auto;
+    text-align: center;
+  
   }
 
   /*  */
@@ -1015,6 +1029,7 @@ figure {
     width: 75%;
     margin: auto;
   }
+
 
   .detail-img-container {
     display: flex;

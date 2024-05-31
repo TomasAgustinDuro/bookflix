@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <h1>Nombre de libro</h1>
+        <h1 class="titulo-libro"></h1>
         <div class="buscador">
             <input type="text" placeholder="Buscar">
             <div class="boton">
@@ -24,26 +24,30 @@
 
    <main>
     <div class="detail-container">
-        <h1>El viento conoce mi nombre</h1>
+        <h1 class="titulo-libro"></h1>
         <div class="detail-container-dos">
             <div class="detail-img-container">
-                <img src="../img/el-viento-conoce-mi-nombre.jpg">
+                <img id="imagen-libro">
             </div>
             <div class="detail-container-tres">
                 
-            <p id="detail-texto-principal">Viena, 1938. Samuel Adler es un niño judío de seis años cuyo padre desaparece durante la Noche de los Cristales Rotos, en la que su familia lo pierde todo. Su madre, desesperada, le consigue una plaza en un tren que le llevará desde la Austria nazi hasta Inglaterra.</p>
+            <p id="descripcion-libro"></p>
             <div class="detail-atributos">
                 <div>
-                    <h2>Año de publicacion:<a href="#">2022</a></h2>
+                    <h2>Año de publicacion:</h2>
+                    <h2 id="anio-publicacion"></h2>
                 </div>
                 <div>
-                    <h2>Temas:<a href="#" >Narrativa</a></h2>
+                    <h2>Temas:</h2>
+                    <h2 id="temas-libro"></h2>
                 </div>
                 <div>
-                    <h2>Editorial:<a href="#" >Plaza & Janes</h2></a>
+                    <h2>Editorial:</h2>
+                    <h2 id="editorial-libro"></h2>
                 </div>
                 <div>
-                    <h2>Nota media:<a href="#" >8/10 (6 votos)</h2></a>
+                    <h2>Nota media:</h2>
+                    <h2 id="nota-media-libro"></h2>
                 </div>
             </div>
             <div class="detail-iconos">
@@ -91,31 +95,7 @@
             </a>
             </div>
     </section>
-    <section class="detail-contenedor-comentarios">
-        <div class="detail-opiniones">
-            <h2>Comentarios y sinopsis de "El viento conoce mi nombre"</h2><br>
-            <article class="detail-comentarios">
-                <h3 i class="fa-solid fa-user" > Maria</h3>
-                <h5>24 de abril 2022</h5>
-                <p>La autora presenta varias historias en principio inconexas pero que confluyen en un final emotivo. El pasado siempre vuelve y es difícil ver que no se avanza y no aprendemos de nuestros errores como sociedad. Vidas destruidas en busca de un futuro mejor.</p><br>
-            </article>
-            <article class="detail-comentarios">
-                <h3 i class="fa-solid fa-user"> Juan</h3>
-                <h5>12 de mayo 2022</h5>
-                <p>La lectura cautiva porque como en tantas otras lecturas de esta autora la vida cotidiana de los personajes discurre en un contexto real y muy bien descrito. Una historia preciosa, muy recomendable.</p><br>
-            </article>
-            <article class="detail-comentarios">
-                <h3 i class="fa-solid fa-user" > Pedro</h3>
-                <h5>17 de junio 2022</h5>
-                <p>Excelente novela. La recomiendo. Es muy triste y cruda, pero a la vez muy tierna por la relación de los protagonistas: Samuel, Anita, Leticia, Selena y Frank.</p><br>
-            </article>
-            <article class="detail-comentarios">
-                <h3 i class="fa-solid fa-user" > laura</h3>
-                <h5>14 de marzo 2023</h5>
-                <p>Este último libro me ha sorprendido. Tiene una primera parte (la persecución de los judíos en Alemania por los nazis) que no es un tema habitual en sus libros. Luego empiezan a aparecer personajes, muchos escenarios y saltos en el tiempo, que dificultan un poco la lectura.</p>
-            </article>
-        </div>
-    </section>
+
     <div class="detail-contenedor-libros">
         <h2>Otras lecturas recomendadas</h2>
         <section class="detail-libros">
