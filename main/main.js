@@ -1,3 +1,145 @@
+async function buscarLibros(tipo, cantidad) {
+  const url = `https://openlibrary.org/search.json?q=${tipo}&limit=${cantidad}`;
+  try {
+      const respuesta = await fetch(url);
+      const datos = await respuesta.json();
+
+      return datos.docs; 
+  } catch (error) {
+      console.error('Error al buscar libros:', error);
+      return []; // Retorna un array vacío en caso de error
+  }
+}
+
+async function mostrarLibrosRecientesYRecomendados() {
+  try {
+      const datos = await buscarLibros('drama', 24); // Obtener 24 libros en total
+      const { recientes, recomendados } = dividirLibros(datos, 12); // Dividir en dos grupos de 12 libros
+      console.log(datos)
+      mostrarLibros(recientes, "home-cont-libros-recientes", 3);
+      mostrarLibros(recomendados, "home-cont-libros-recomendados", 3);
+      mostrarLibros(recientes, "recientes-contenedor", 12); // Mostrar todos los libros recientes en "recientes-contenedor"
+  } catch (error) {
+      console.error('Error al mostrar libros recientes y recomendados:', error);
+  }
+}
+
+function dividirLibros(libros, cantidadPorGrupo) {
+  const recientes = libros.slice(0, cantidadPorGrupo);
+  const recomendados = libros.slice(cantidadPorGrupo, cantidadPorGrupo * 2);
+  return { recientes, recomendados };
+}
+
+async function mostrarLibros(datos, contenedorId, cantidadMaxima) {
+  const contenedorLibros = document.getElementById(contenedorId);
+
+  if (contenedorLibros) {
+      let htmlContenedorLibros = '';
+      let contador = 0;
+
+      datos.forEach(documento => {
+          if (contador < cantidadMaxima) {
+              const coverId = documento.cover_i;
+              const urlFoto = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
+              const libroData = JSON.stringify(documento).replace(/'/g, "&apos;");
+
+              htmlContenedorLibros += `
+                  <div class="home-cont-libro" data-libro='${libroData}'>
+                      <h3 class="home-title-libro">${documento.title}</h3>
+                      <img src="${urlFoto}" class="home-libro" alt="Carátula del libro">
+                      <p class="home-puntuacion">${documento.ratings_average ? documento.ratings_average.toFixed(2) : 'N/A'}</p>
+                  </div>
+              `;
+
+              contador++;
+          } else {
+              return;
+          }
+      });
+
+      contenedorLibros.innerHTML = htmlContenedorLibros;
+
+      // Añadir event listeners a los elementos creados
+      const elementosLibros = contenedorLibros.querySelectorAll('.home-cont-libro');
+      elementosLibros.forEach(elemento => {
+          elemento.addEventListener('click', (event) => {
+              const libroData = event.currentTarget.getAttribute('data-libro');
+              guardarYRedirigir(libroData);
+          });
+      });
+  } else {
+      console.log(`El contenedor ${contenedorId} no está presente en la página.`);
+  }
+}
+
+function guardarYRedirigir(libroData) {
+  localStorage.setItem('libroSeleccionado', libroData);
+  window.location.href = 'pages/detail.html';
+}
+
+async function buscarDescripcionLibro(libroId) {
+  const url = `https://openlibrary.org/works/${libroId}.json`;
+  try {
+      const respuesta = await fetch(url);
+      const datos = await respuesta.json();
+      console.log
+      return datos; 
+  } catch (error) {
+      console.error('Error al buscar la descripción del libro:', error);
+      return null; 
+  }
+}
+
+// Código para manejar la página de detalles
+async function mostrarDetallesLibro() {
+  const libroData = localStorage.getItem('libroSeleccionado');
+
+  if (libroData) {
+      const libro = JSON.parse(libroData);
+      console.log('Datos del libro después de parsear JSON:', libro); // Depuración
+
+      // Mostrar los datos del libro en `detail.html`
+      titulosLibro = document.getElementsByClassName('titulo-libro')
+      
+      for (let i = 0; i < titulosLibro.length; i++) {
+        titulosLibro[i].innerText = libro.title;
+    }
+
+      // Obtener la descripción del libro de forma asíncrona
+      try {
+          const descripcionLibro = await buscarDescripcionLibro(libro.key.slice(7)); // Slice para quitar "/books/"
+          document.getElementById('descripcion-libro').innerText = descripcionLibro ? descripcionLibro.description : 'Descripción no disponible';
+      } catch (error) {
+          console.error('Error al obtener la descripción del libro:', error);
+          document.getElementById('descripcion-libro').innerText = 'Error al obtener la descripción del libro';
+      }
+
+      document.getElementById('anio-publicacion').innerText = libro.first_publish_year ? libro.first_publish_year : 'Año no disponible';
+      const coverId = libro.cover_i;
+      const urlFoto = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
+      document.getElementById('imagen-libro').src = urlFoto;
+
+      // Otros campos
+      document.getElementById('temas-libro').innerText = libro.subject && libro.subject.length > 0 ? libro.subject[0] : 'Temas no disponibles';
+
+      const editorial = libro.publisher && libro.publisher.length > 0 ? libro.publisher[0] : 'Editorial no disponible';
+      document.getElementById('editorial-libro').innerText = editorial;
+
+      const notaMedia = libro.ratings_average ? `${libro.ratings_average.toFixed(2)} (${libro.ratings_count} votos)` : 'Nota no disponible';
+      document.getElementById('nota-media-libro').innerText = notaMedia;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.pathname.endsWith('detail.html')) {
+      mostrarDetallesLibro();
+  } else {
+      mostrarLibrosRecientesYRecomendados();
+  }
+});
+
+
+
 // Registro
 const inputNombreUsuarioNuevo = document.getElementById("nombres");
 const inputApellidoUsuarioNuevo = document.getElementById("apellidos");
@@ -223,4 +365,4 @@ if (cerrarSesion) {
   });
 }
 
-
+//API REST
