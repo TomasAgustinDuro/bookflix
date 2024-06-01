@@ -43,7 +43,7 @@ if (btnRegistro) {
         generoSeleccionado = radio.value;
       }
     });
-
+      validar()
     let nuevoUsuario = {
       nombre: nombreUsuarioNuevo,
       apellido: apellidoUsuarioNuevo,
@@ -222,5 +222,55 @@ if (cerrarSesion) {
     });
   });
 }
+//validaciones
+function validar() {
+  console.log("arranco funcion validar")
+  
+  var nombres = document.getElementById("nombres").value;
+  // Expresión regular para validar que no haya números en el nombre
+  var nombreRegex = /^[a-zA-Z\s]*$/;
 
+  // Verificar si el nombre cumple con la expresión regular
+  if (!nombreRegex.test(nombres)) {
+      // Si no cumple, mostramos un mensaje de error
+      alert('El nombre no puede contener números.');
+      // Detenemos el envío del formulario
+      event.preventDefault();
+  }
+  var apellidos = document.getElementById("apellidos").value;
+  var apellidoRegex = /^[a-zA-Z\s]*$/;
+  if (!apellidoRegex.test(apellidos)) {
+    // Si no cumple, mostramos un mensaje de error
+    alert('El Apellido no puede contener números.');
+    // Detenemos el envío del formulario
+    event.preventDefault();
+}
+  var fecha = document.getElementById("fecha").value;
+  var correo = document.getElementById("correo").value;
+  var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!correoRegex.test(correo)){
+    alert('El correo no es válido.');
+    // Detenemos el envío del formulario
+    event.preventDefault();
+}
+  var contrasenia = document.getElementById("contrasenia").value;
+  var pais = document.getElementsByName("pais")[0].value;
+  var sexo = document.querySelector('input[name="sexo"]:checked');
+  var condiciones = document.getElementById("condiciones").checked;
+  var fecha = document.getElementById("fecha").value;
+  var valido = true;
+
+  if (nombres === "" ||
+      apellidos ==="" || 
+      fecha ==="" || 
+      correo ==="" ||
+      contrasenia === "" ||
+      pais === ""|| 
+      sexo === "" || 
+      condiciones === "" )
+      valido = false; {
+      alert ('Todos los campos deben estar completos.')
+  event.preventDefault();
+}
+}
 
