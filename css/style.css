@@ -852,6 +852,8 @@ figure {
 
 /* Responsive */
 
+
+/* Tablet */
 @media screen and (min-width: 768px) {
   /* Home */
   .title-home {
@@ -888,11 +890,11 @@ figure {
     height: 110px;
     background-color: #bdd3b6;
     display: flex;
-    grid-gap: 15em;
+    grid-gap: 12em;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 3em;
   }
 
   .footer-logo {
@@ -917,9 +919,9 @@ figure {
 
   /* navbar */
 
-  .navbar li a {
-    padding: 0.7em 5em;
-  }
+  /* .navbar li a {
+    
+  } */
 
   .navbar li a:hover {
     background-color: #8c0b13;
@@ -930,6 +932,7 @@ figure {
 
   .form-login {
     width: 30%;
+    margin: 5% auto;
   }
 
   /*  */
@@ -938,7 +941,7 @@ figure {
   .about-contenedor {
     display: flex;
     flex-direction: row;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
 
   .about-text {
@@ -986,7 +989,7 @@ figure {
   }
 
   .soporte {
-    width: 25%;
+    width: 45%;
     margin: 2em auto;
   }
 
@@ -1001,9 +1004,14 @@ figure {
   }
 
   .card {
-    width: 20%;
+    width: 30%;
     font-size: 1em;
   }
+
+  .card img {
+    height: 15em;
+  }
+
 
   /*  */
 
@@ -1053,7 +1061,7 @@ figure {
   /* Formulario registro */
 
   .formulario-registro {
-    width: 30%;
+    width: 50%;
   }
 
   /*  */
@@ -1064,4 +1072,39 @@ figure {
     width: 30%;
   }
   /*  */
+}
+
+/* PC */
+@media screen and (min-width: 1024px) {
+  .navbar li a {
+    padding: 0.7em 5em;
+  }
+
+  #descripcion-libro{
+    font-size: 1.3em;
+  }
+
+  #resenia-h3 {
+    font-size: 2em;
+  }
+
+  .resenia-form {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .card {
+    width: 15em;
+    border: solid 1px red;
+  }
+
+  #nombre,
+  .resenia-form textarea,
+  #resenia-button-submit {
+    border: solid 1px red;
+    width: 50%;
+    margin: .5em auto;
+  }
+
 }
