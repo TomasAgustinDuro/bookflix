@@ -223,14 +223,28 @@ if (cerrarSesion) {
   });
 }
 //validaciones
-function validar() {
-  console.log("arranco funcion validar")
-  
+if (btnRegistro) {
+  btnRegistro.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    // Realizar validaciones
+    if (!validarCampos()) {
+      // Mostrar mensaje de error al usuario
+      alert("Por favor, complete todos los campos correctamente.");
+      return; // Evitar el registro y la redirección
+    }
+
+    // Continuar con el registro si todos los campos son válidos
+    // Código para registrar al usuario y redirigirlo
+    // ...
+  });
+}
+
+function validarCampos() {
   var nombres = document.getElementById("nombres").value;
   // Expresión regular para validar que no haya números en el nombre
   var nombreRegex = /^[a-zA-Z\s]*$/;
-
-  // Verificar si el nombre cumple con la expresión regular
+// Verificar si el nombre cumple con la expresión regular
   if (!nombreRegex.test(nombres)) {
       // Si no cumple, mostramos un mensaje de error
       alert('El nombre no puede contener números.');
@@ -245,7 +259,6 @@ function validar() {
     // Detenemos el envío del formulario
     event.preventDefault();
 }
-  var fecha = document.getElementById("fecha").value;
   var correo = document.getElementById("correo").value;
   var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!correoRegex.test(correo)){
@@ -254,23 +267,99 @@ function validar() {
     event.preventDefault();
 }
   var contrasenia = document.getElementById("contrasenia").value;
-  var pais = document.getElementsByName("pais")[0].value;
-  var sexo = document.querySelector('input[name="sexo"]:checked');
-  var condiciones = document.getElementById("condiciones").checked;
-  var fecha = document.getElementById("fecha").value;
-  var valido = true;
+    const regexLongitud = /.{6,}/;
+    const regexNumero = /\d/;
+    const regexMayuscula = /[A-Z]/;
 
-  if (nombres === "" ||
-      apellidos ==="" || 
-      fecha ==="" || 
-      correo ==="" ||
-      contrasenia === "" ||
-      pais === ""|| 
-      sexo === "" || 
-      condiciones === "" )
-      valido = false; {
-      alert ('Todos los campos deben estar completos.')
-  event.preventDefault();
+    // Verificar cada criterio
+  if (!regexLongitud.test(contrasenia)) {
+      alert('La contraseña debe tener al menos 6 caracteres.');
+      event.preventDefault(); 
+      // Evita el envío del formulario
+      return;
+    }
+
+    if (!regexNumero.test(contrasenia)) {
+      alert('La contraseña debe contener al menos un número.');
+      event.preventDefault(); 
+      // Evita el envío del formulario
+      return;
+    }
+
+    if (!regexMayuscula.test(contrasenia)) {
+      alert('La contraseña debe contener al menos una letra mayúscula.');
+      event.preventDefault(); 
+      // Evita el envío del formulario
+      return;
+    }
+
+// Si pasa todas las validaciones, el formulario se enviará normalmente.
+
+
+  // Aquí realiza las validaciones de tus campos
+  // Por ejemplo, verifica que todos los campos estén completos y sean válidos
+  // Si algo no es válido, devuelve false; de lo contrario, devuelve true
+
+  // Ejemplo de validación básica: verificar si algún campo está vacío
+  if (
+    !inputNombreUsuarioNuevo.value ||
+    !inputApellidoUsuarioNuevo.value ||
+    !inputFechaUsuarioNuevo.value ||
+    !inputCorreoUsuarioNuevo.value ||
+    !inputContraseniaUsuarioNuevo.value ||
+    !inputPaisUsuarioNuevo.value ||
+    !generoSeleccionado
+  ) {
+    return false; // Al menos un campo está vacío
+  }
+  else  {
+    Consol.log (error) 
+  }
 }
-}
+btnRegistro.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    let nombreUsuarioNuevo = inputNombreUsuarioNuevo.value;
+    let apellidoUsuarioNuevo = inputApellidoUsuarioNuevo.value;
+    let fechaUsuarioNuevo = inputFechaUsuarioNuevo.value;
+    let correoUsuarioNuevo = inputCorreoUsuarioNuevo.value;
+    let contraseniaUsuarioNuevo = inputContraseniaUsuarioNuevo.value;
+    let paisUsuarioNuevo = inputPaisUsuarioNuevo.value;
+
+    // Obtener valor de type radio
+    let generoSeleccionado = null;
+    // Iterar sobre cada radio button
+    radiosSexoUsuarioNuevo.forEach((radio) => {
+      // Verificar si el radio button está seleccionado
+      if (radio.checked) {
+        // Obtener el valor seleccionado
+        generoSeleccionado = radio.value;
+      }
+    });
+
+    let nuevoUsuario = {
+      nombre: nombreUsuarioNuevo,
+      apellido: apellidoUsuarioNuevo,
+      fecha: fechaUsuarioNuevo,
+      correo: correoUsuarioNuevo,
+      contrasenia: contraseniaUsuarioNuevo,
+      pais: paisUsuarioNuevo,
+      genero: generoSeleccionado,
+    };
+
+    usuariosRegistrados[correoUsuarioNuevo] = nuevoUsuario;
+    localStorage.setItem(
+      "usuariosRegistrados",
+      JSON.stringify(usuariosRegistrados)
+    );
+
+    console.log(nuevoUsuario);
+    console.log(usuariosRegistrados);
+
+    window.location.href = "login.html";
+  });  
+
+
+
+
 
