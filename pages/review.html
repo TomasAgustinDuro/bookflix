@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="" href="img/icons8-gafas-30.png">
+    <title>Mi perfil</title>
+</head>
+<body>
+    <header>
+        <h1>Reseñas</h1>
+        <div class="buscador">
+                <input type="text" placeholder="Buscar">
+                <div class="boton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>            
+        </div>
+    </header>
+        <main>
+            <h3 id="resenia-h3">Titulo del libro</h3>
+
+            <div class="resenia-contenedor">
+                <img src="../img/el-dia-de-los-trifidos.jpg"  alt="">
+
+               <div class="resenia-contenedor-reseñas">
+                <div >
+                    <h4>
+                        Nombre del usuario / reseña 1
+                    </h4>
+
+                    <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"</p>
+                </div>
+
+                <div>
+                    <h4>
+                        Nombre del usuario / reseña 2
+                    </h4>
+
+                    <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"</p>
+                </div>
+
+               </div>
+            </div>
+
+            <div class="resenia-form">
+                <h2>Dejar una Reseña</h2>
+                <form action="" method="POST">
+                    <label for="nombre">Nombre:  <input type="text" id="nombre" name="nombre" required></label>
+                    <label for="resenia">Reseña:</label>
+                    <textarea id="resenia" name="resenia" required></textarea>
+            
+                    <input type="submit" value="Enviar Reseña" id="resenia-button-submit">
+                </form>
+           </div>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p class="footer-logo">BOOKFLIX</p>
+                <p class="footer-copy">&#169 2024 Bookflix - All Rights Reserved.</p>
+                <div class="footer-div">
+                    <i class="fa-brands fa-instagram footer-icon "></i>
+                    <i class="fa-brands fa-facebook footer-icon"></i>
+                    <i class="fa-brands fa-square-x-twitter footer-icon"></i>
+                </div>
+            </div>
+
+        </footer>
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="detail.html"><i class="fa-solid fa-star"></i></a></li>
+                <li><a href="recent.html"><i class="fa-solid fa-list-check"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-glasses"></i></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li>
+                <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+
+       
+    <script src="../main/main.js"></script>
+    <script src="https://kit.fontawesome.com/63ed2924ae.js" crossorigin="anonymous"></script>
+</body>
+</html>
