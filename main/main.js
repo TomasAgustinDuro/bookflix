@@ -15,7 +15,6 @@ async function mostrarLibrosRecientesYRecomendados() {
   try {
       const datos = await buscarLibros('drama', 24); // Obtener 24 libros en total
       const { recientes, recomendados } = dividirLibros(datos, 12); // Dividir en dos grupos de 12 libros
-      console.log(datos)
       mostrarLibros(recientes, "home-cont-libros-recientes", 3);
       mostrarLibros(recomendados, "home-cont-libros-recomendados", 3);
       mostrarLibros(recientes, "recientes-contenedor", 12); // Mostrar todos los libros recientes en "recientes-contenedor"
@@ -82,7 +81,6 @@ async function buscarDescripcionLibro(libroId) {
   try {
       const respuesta = await fetch(url);
       const datos = await respuesta.json();
-      console.log
       return datos; 
   } catch (error) {
       console.error('Error al buscar la descripción del libro:', error);
@@ -96,7 +94,6 @@ async function mostrarDetallesLibro() {
 
   if (libroData) {
       const libro = JSON.parse(libroData);
-      console.log('Datos del libro después de parsear JSON:', libro); // Depuración
 
       // Mostrar los datos del libro en `detail.html`
       titulosLibro = document.getElementsByClassName('titulo-libro')
@@ -156,58 +153,10 @@ let btnRegistro = document.getElementById("btn-registro");
 
 if (localStorage.getItem("usuariosRegistrados")) {
   usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados"));
-  console.log(
-    "Usuarios registrados cargados desde localStorage:",
-    usuariosRegistrados
-  );
 } else {
   console.log("No hay usuarios registrados en localStorage.");
 }
 
-if (btnRegistro) {
-  btnRegistro.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    let nombreUsuarioNuevo = inputNombreUsuarioNuevo.value;
-    let apellidoUsuarioNuevo = inputApellidoUsuarioNuevo.value;
-    let fechaUsuarioNuevo = inputFechaUsuarioNuevo.value;
-    let correoUsuarioNuevo = inputCorreoUsuarioNuevo.value;
-    let contraseniaUsuarioNuevo = inputContraseniaUsuarioNuevo.value;
-    let paisUsuarioNuevo = inputPaisUsuarioNuevo.value;
-
-    // Obtener valor de type radio
-    let generoSeleccionado = null;
-    // Iterar sobre cada radio button
-    radiosSexoUsuarioNuevo.forEach((radio) => {
-      // Verificar si el radio button está seleccionado
-      if (radio.checked) {
-        // Obtener el valor seleccionado
-        generoSeleccionado = radio.value;
-      }
-    });
-      validar()
-    let nuevoUsuario = {
-      nombre: nombreUsuarioNuevo,
-      apellido: apellidoUsuarioNuevo,
-      fecha: fechaUsuarioNuevo,
-      correo: correoUsuarioNuevo,
-      contrasenia: contraseniaUsuarioNuevo,
-      pais: paisUsuarioNuevo,
-      genero: generoSeleccionado,
-    };
-
-    usuariosRegistrados[correoUsuarioNuevo] = nuevoUsuario;
-    localStorage.setItem(
-      "usuariosRegistrados",
-      JSON.stringify(usuariosRegistrados)
-    );
-
-    console.log(nuevoUsuario);
-    console.log(usuariosRegistrados);
-
-    window.location.href = "login.html";
-  });
-}
 
 // Login
 const inputEmailUsuario = document.getElementById("email");
@@ -219,7 +168,6 @@ const errorMsg = document.getElementById("error-msg");
 // Cargar usuario logueado desde localStorage
 if (localStorage.getItem("usuarioLogueado")) {
   usuarioLogueado = localStorage.getItem("usuarioLogueado");
-  console.log("Usuario logueado cargado desde localStorage:", usuarioLogueado);
 } else {
   console.log("No hay usuario logueado en localStorage.");
 }
@@ -244,8 +192,6 @@ if (btnLogin) {
         // Las credenciales son correctas
         usuarioLogueado = emailUsuario;
         localStorage.setItem("usuarioLogueado", usuarioLogueado);
-        console.log("Inicio de sesión exitoso para:", emailUsuario);
-        console.log(usuarioLogueado);
         window.location.href = "profile.html";
       } else {
         // La contraseña es incorrecta
@@ -319,7 +265,6 @@ const navegador = document.querySelector(".navbar ul");
 
 if (navegador) {
   if (localStorage.getItem("usuarioLogueado")) {
-    console.log(localStorage.getItem("usuarioLogueado"));
     // Crear el nuevo elemento <li>
     const nuevoItem = document.createElement('li');
     const isIndex = window.location.pathname.includes("index.html");
@@ -360,148 +305,91 @@ if (cerrarSesion) {
       localStorage.removeItem("usuarioLogueado");
       usuarioLogueado = null; 
       window.location.href = "../index.html";
-      console.log("sesion eliminada con exito");
     });
   });
 }
-//validaciones
+
+
+function validar() {
+  console.log("arranco funcion validar");
+
+  var nombres = document.getElementById("nombres").value;
+  // Expresión regular para validar que no haya números y permitir tildes
+  var nombreRegex = /^[a-zA-ZÀ-ÿ\s]*$/;
+
+  if (!nombreRegex.test(nombres)) {
+    alert('El nombre no puede contener números.');
+    return false;
+  }
+
+  var apellidos = document.getElementById("apellidos").value;
+  var apellidoRegex = /^[a-zA-ZÀ-ÿ\s]*$/;
+
+  if (!apellidoRegex.test(apellidos)) {
+    alert('El apellido no puede contener números.');
+    return false;
+  }
+
+  var fecha = document.getElementById("fecha").value;
+  var correo = document.getElementById("correo").value;
+  var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!correoRegex.test(correo)) {
+    alert('El correo no es válido.');
+    return false;
+  }
+
+  var contrasenia = document.getElementById("contrasenia").value;
+  var pais = document.getElementsByName("pais")[0].value;
+  var sexo = document.querySelector('input[name="sexo"]:checked');
+  var condiciones = document.getElementById("condiciones").checked;
+
+  if (nombres === "" || apellidos === "" || fecha === "" || correo === "" || contrasenia === "" || pais === "" || sexo === null || !condiciones) {
+    alert('Todos los campos deben estar completos.');
+    return false;
+  }
+
+  return true;
+}
+
 if (btnRegistro) {
   btnRegistro.addEventListener("click", (event) => {
     event.preventDefault();
 
-    // Realizar validaciones
-    if (!validarCampos()) {
-      // Mostrar mensaje de error al usuario
-      alert("Por favor, complete todos los campos correctamente.");
-      return; // Evitar el registro y la redirección
-    }
+    if (validar()) {
+      let nombreUsuarioNuevo = inputNombreUsuarioNuevo.value;
+      let apellidoUsuarioNuevo = inputApellidoUsuarioNuevo.value;
+      let fechaUsuarioNuevo = inputFechaUsuarioNuevo.value;
+      let correoUsuarioNuevo = inputCorreoUsuarioNuevo.value;
+      let contraseniaUsuarioNuevo = inputContraseniaUsuarioNuevo.value;
+      let paisUsuarioNuevo = inputPaisUsuarioNuevo.value;
 
-    // Continuar con el registro si todos los campos son válidos
-    // Código para registrar al usuario y redirigirlo
-    // ...
+      let generoSeleccionado = null;
+      radiosSexoUsuarioNuevo.forEach((radio) => {
+        if (radio.checked) {
+          generoSeleccionado = radio.value;
+        }
+      });
+
+      let nuevoUsuario = {
+        nombre: nombreUsuarioNuevo,
+        apellido: apellidoUsuarioNuevo,
+        fecha: fechaUsuarioNuevo,
+        correo: correoUsuarioNuevo,
+        contrasenia: contraseniaUsuarioNuevo,
+        pais: paisUsuarioNuevo,
+        genero: generoSeleccionado,
+      };
+
+      usuariosRegistrados[correoUsuarioNuevo] = nuevoUsuario;
+      localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
+
+
+      window.location.href = "login.html";
+    } else {
+      console.error("Error en la validación. Por favor, revisa los campos.");
+    }
   });
 }
-
-function validarCampos() {
-  var nombres = document.getElementById("nombres").value;
-  // Expresión regular para validar que no haya números en el nombre
-  var nombreRegex = /^[a-zA-Z\s]*$/;
-// Verificar si el nombre cumple con la expresión regular
-  if (!nombreRegex.test(nombres)) {
-      // Si no cumple, mostramos un mensaje de error
-      alert('El nombre no puede contener números.');
-      // Detenemos el envío del formulario
-      event.preventDefault();
-  }
-  var apellidos = document.getElementById("apellidos").value;
-  var apellidoRegex = /^[a-zA-Z\s]*$/;
-  if (!apellidoRegex.test(apellidos)) {
-    // Si no cumple, mostramos un mensaje de error
-    alert('El Apellido no puede contener números.');
-    // Detenemos el envío del formulario
-    event.preventDefault();
-}
-  var correo = document.getElementById("correo").value;
-  var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!correoRegex.test(correo)){
-    alert('El correo no es válido.');
-    // Detenemos el envío del formulario
-    event.preventDefault();
-}
-  var contrasenia = document.getElementById("contrasenia").value;
-    const regexLongitud = /.{6,}/;
-    const regexNumero = /\d/;
-    const regexMayuscula = /[A-Z]/;
-
-    // Verificar cada criterio
-  if (!regexLongitud.test(contrasenia)) {
-      alert('La contraseña debe tener al menos 6 caracteres.');
-      event.preventDefault(); 
-      // Evita el envío del formulario
-      return;
-    }
-
-    if (!regexNumero.test(contrasenia)) {
-      alert('La contraseña debe contener al menos un número.');
-      event.preventDefault(); 
-      // Evita el envío del formulario
-      return;
-    }
-
-    if (!regexMayuscula.test(contrasenia)) {
-      alert('La contraseña debe contener al menos una letra mayúscula.');
-      event.preventDefault(); 
-      // Evita el envío del formulario
-      return;
-    }
-
-// Si pasa todas las validaciones, el formulario se enviará normalmente.
-
-
-  // Aquí realiza las validaciones de tus campos
-  // Por ejemplo, verifica que todos los campos estén completos y sean válidos
-  // Si algo no es válido, devuelve false; de lo contrario, devuelve true
-
-  // Ejemplo de validación básica: verificar si algún campo está vacío
-  if (
-    !inputNombreUsuarioNuevo.value ||
-    !inputApellidoUsuarioNuevo.value ||
-    !inputFechaUsuarioNuevo.value ||
-    !inputCorreoUsuarioNuevo.value ||
-    !inputContraseniaUsuarioNuevo.value ||
-    !inputPaisUsuarioNuevo.value ||
-    !generoSeleccionado
-  ) {
-    return false; // Al menos un campo está vacío
-  }
-  else  {
-    Consol.log (error) 
-  }
-}
-btnRegistro.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    let nombreUsuarioNuevo = inputNombreUsuarioNuevo.value;
-    let apellidoUsuarioNuevo = inputApellidoUsuarioNuevo.value;
-    let fechaUsuarioNuevo = inputFechaUsuarioNuevo.value;
-    let correoUsuarioNuevo = inputCorreoUsuarioNuevo.value;
-    let contraseniaUsuarioNuevo = inputContraseniaUsuarioNuevo.value;
-    let paisUsuarioNuevo = inputPaisUsuarioNuevo.value;
-
-    // Obtener valor de type radio
-    let generoSeleccionado = null;
-    // Iterar sobre cada radio button
-    radiosSexoUsuarioNuevo.forEach((radio) => {
-      // Verificar si el radio button está seleccionado
-      if (radio.checked) {
-        // Obtener el valor seleccionado
-        generoSeleccionado = radio.value;
-      }
-    });
-
-    let nuevoUsuario = {
-      nombre: nombreUsuarioNuevo,
-      apellido: apellidoUsuarioNuevo,
-      fecha: fechaUsuarioNuevo,
-      correo: correoUsuarioNuevo,
-      contrasenia: contraseniaUsuarioNuevo,
-      pais: paisUsuarioNuevo,
-      genero: generoSeleccionado,
-    };
-
-    usuariosRegistrados[correoUsuarioNuevo] = nuevoUsuario;
-    localStorage.setItem(
-      "usuariosRegistrados",
-      JSON.stringify(usuariosRegistrados)
-    );
-
-    console.log(nuevoUsuario);
-    console.log(usuariosRegistrados);
-
-    window.location.href = "login.html";
-  });  
-
-
-
 
 //API REST
