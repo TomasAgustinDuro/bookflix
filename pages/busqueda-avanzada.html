@@ -28,7 +28,7 @@
             <label for="año">Año de publicacion:</label>
             <input type="number" name="año" id="año" value="">
             <label for="genero">Genero del libro:</label>
-            <select name="genero">
+            <select name="genero" id="genero">
                 <option value="dramatica">Dramatica</option>
                 <option value="Narrativa">Narrativa</option>
                 <option value="poetico">Poetico</option>
@@ -37,8 +37,9 @@
                 <option value="fabula">Fabula</option>
             </select>
             <label for="comentarios">Pequeña descripcion del libro:</label>
-            <textarea name="comentarios" rows="8" cols="10">escriba aquí:</textarea><br>
+            <textarea name="comentarios" id="comentarios" rows="8" cols="10">escriba aquí:</textarea><br>
             <input class="btn" type="submit" name="buscar" value="Buscar">
+            <p class="warnigns" id="warnigns"></p>
         </div>
     </form>
    </main>
@@ -53,9 +54,7 @@
                 <i class="fa-brands fa-square-x-twitter footer-icon"></i>
             </div>
         </div>
-
     </footer>
-
     <nav class="navbar">
         <ul>
             <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
@@ -66,6 +65,6 @@
             <li><a href="pages/about.html"><i class="fa-solid fa-circle-info"></i></a></li>
         </ul>
     </nav>
-
+    <script src="ap.js"></script>
    </body>
 </html>
