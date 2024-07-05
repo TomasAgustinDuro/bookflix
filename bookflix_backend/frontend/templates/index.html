@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %}Inicio{% endblock %} 
+{%block content %}
+<div class="home-main">
+  <div class="home" id="home">
+    <h1 class="title-home">Tu blog de reseñas literarias</h1>
+    <p class="p-home">¿Quieres ver Bookflix ya?</p>
+    <div class="div-btn-home">
+      <button class="btn-home">
+        <a href="pages/registro.html">Comenzar</a>
+      </button>
+    </div>
+  </div>
+  <div class="home-div-seccion">
+    <h2 class="home-title-seccion">Recientes</h2>
+    <a href="pages/recent.html">Ver más</a>
+    <div id="home-cont-libros-recientes" class="home-cont-libros"></div>
+  </div>
+  <div class="home-div-seccion">
+    <h2 class="home-title-seccion">Recomendados</h2>
+    <div id="home-cont-libros-recomendados" class="home-cont-libros"></div>
+  </div>
+{% endblock %}
+

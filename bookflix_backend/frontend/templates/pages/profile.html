@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Mi perfil{% endblock %}
+
+{% block content %}
+<div class="info-personal">
+  <h3>Información personal</h3>
+  <section class="detalle">
+    <p><strong>Nombre:</strong> <span id="profile-nombre"></span></p>
+    <p><strong>Correo:</strong> <span id="profile-correo"></span></p>
+    <p><strong>Contraseña:</strong> <span id="profile-password" class="censored"></span></p>
+</section>
+
+</div>
+<div class="profile-recientes">
+  <h2>Mi lista</h2>
+  <div class="cards-lista-sm">
+    <div class="card">
+      <img
+        src="../img/el-dia-de-los-trifidos.jpg"
+        alt="el-dia-de-los-trifidos"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint illo
+        voluptate voluptatem! Ex iure saepe nulla fuga qui. Cumque beatae
+        suscipit quam error molestiae voluptatibus qui doloremque,
+        excepturi sequi facilis.
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        src="../img/la-casa-de-los-espiritus.jpg"
+        alt="la-casa-de-los-espiritus"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+        itaque quia nemo dolorum rem qui repudiandae ut debitis, assumenda
+        ratione libero perspiciatis vitae laudantium ipsa, explicabo
+        provident tempora ex ipsam.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="../img/el-dia-de-los-trifidos.jpg" alt="river-god" />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, qui
+        doloribus, expedita autem veritatis pariatur laudantium fugit ad
+        ea, voluptas et itaque magni sunt ducimus incidunt. Dicta rem
+        quibusdam alias!
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        src="../img/el-dia-de-los-trifidos.jpg"
+        alt="el-dia-de-los-trifidos"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint illo
+        voluptate voluptatem! Ex iure saepe nulla fuga qui. Cumque beatae
+        suscipit quam error molestiae voluptatibus qui doloremque,
+        excepturi sequi facilis.
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        src="../img/la-casa-de-los-espiritus.jpg"
+        alt="la-casa-de-los-espiritus"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+        itaque quia nemo dolorum rem qui repudiandae ut debitis, assumenda
+        ratione libero perspiciatis vitae laudantium ipsa, explicabo
+        provident tempora ex ipsam.
+      </p>
+    </div>
+    
+  </div>
+</div>
+<div class="soporte">
+  <h3>Soporte</h3>
+  <p>Centro de ayuda</p>
+  <p>Contacto</p>
+  <p><a href="" class="cerrar-sesion">Cerrar sesion</a></p>
+  <p><a href="" id="profile-link-eliminar">Eliminar mi cuenta</a></p>
+</div>
+{% endblock %}

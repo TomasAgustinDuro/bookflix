@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<form class="form-login">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="password">Contraseña</label>
+  <input type="password" id="password" name="password" required>
+  <p id="error-msg">El correo electrónico o la contraseña son incorrectos.</p>
+
+  <button id="btn-login">Iniciar sesión</button> 
+
+  <a href="registro.html">¿Aún no tienes cuenta?</a>
+</form>
+{% endblock %}
+
+
+    
+  

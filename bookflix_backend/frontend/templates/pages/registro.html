@@ -1,0 +1,83 @@
+{% extends 'base.html' %} 
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+<form>
+  <section class="formulario-registro">
+    <h4>Formulario Registro</h4>
+    <input
+      class="registro-controles"
+      type="text"
+      name="nombres"
+      id="nombres"
+      placeholder="Ingrese su nombre"
+    />
+    <input
+      class="registro-controles"
+      type="text"
+      name="apellidos"
+      id="apellidos"
+      placeholder="Ingrese su apellido"
+    />
+    <input
+      class="registro-controles"
+      type="date"
+      name="fecha"
+      id="fecha"
+      placeholder="dd/mm/aaaa"
+    />
+    <input
+      class="registro-controles"
+      type="email"
+      name="correo"
+      id="correo"
+      placeholder="Ingrese su correo"
+    />
+    <input
+      class="registro-controles"
+      type="password"
+      name="contrasenia"
+      id="contrasenia"
+      placeholder="Ingrese una contraseña"
+    />
+    <div>
+      <select class="registro-controles" id="pais" name="pais" placeholder="País">
+        <option value="1">Argentina</option>
+        <option value="2">Bolivia</option>
+        <option value="3">Brasil</option>
+        <option value="4">Chile</option>
+        <option value="5">Colombia</option>
+        <option value="6">Ecuador</option>
+        <option value="7">Estados Unidos</option>
+        <option value="8">Paraguay</option>
+        <option value="9">Perú</option>
+        <option value="10">Uruguay</option>
+        <option value="11">Venezuela</option>
+      </select>
+    </div>
+
+    <div class="genero">
+      <input type="radio" id="hombre" name="sexo" />
+      <label for="hombre">Hombre</label>
+      <input type="radio" id="mujer" name="sexo" />
+      <label for="mujer">Mujer</label>
+      <input type="radio" id="otro" name="sexo" />
+      <label for="otro">Otro</label>
+    </div>
+
+    
+
+   <div class="terminos-envio">
+      <div class="condiciones-container">
+        <input type="checkbox" id="condiciones" value="1" required/>
+        <label for="condiciones"><a href="#" >Acepto términos y condiciones</a></label>
+      </div>     
+    <button class="controles" id="btn-registro">Registrarse</button>
+    <a href="#">¿Aún no tienes cuenta?</a>
+   </div>
+  </section>
+</form>
+{% endblock %}
+
+      
+

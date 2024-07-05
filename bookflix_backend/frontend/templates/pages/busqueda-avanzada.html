@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="">
+        <meta name="copyright" content="Bookflix">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="icon" type="" href="img/icons8-gafas-30.png">
+        <title>Form 2</title>
+    </head>
+<body>
+    <header>
+        <h1>Búsqueda avanzada</h1>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar">
+            <div class="boton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>            
+        </div>
+    </header>
+   <main id="busqueda-main">
+    <form class="busqueda-form">
+        <h2>Encontra tus libros favoritos</h2><br>
+        <div class="busqueda-input-group">
+            <label for="name">Nombre del libro:</label>
+            <input type="text" name="name" id="name">
+            <label for="autor">Nombre del autor:</label>
+            <input type="text" name="autor" id="autor">
+            <label for="año">Año de publicacion:</label>
+            <input type="number" name="año" id="año" value="">
+            <label for="genero">Genero del libro:</label>
+            <select name="genero">
+                <option value="dramatica">Dramatica</option>
+                <option value="Narrativa">Narrativa</option>
+                <option value="poetico">Poetico</option>
+                <option value="Didactico">Didactico</option>
+                <option value="novela">Novela</option>
+                <option value="fabula">Fabula</option>
+            </select>
+            <label for="comentarios">Pequeña descripcion del libro:</label>
+            <textarea name="comentarios" rows="8" cols="10">escriba aquí:</textarea><br>
+            <input class="btn" type="submit" name="buscar" value="Buscar">
+        </div>
+    </form>
+   </main>
+
+   <footer>
+        <div class="footer-container">
+            <p class="footer-logo">BOOKFLIX</p>
+            <p class="footer-copy">&#169 2024 Bookflix - All Rights Reserved.</p>
+            <div class="footer-div">
+                <i class="fa-brands fa-instagram footer-icon "></i>
+                <i class="fa-brands fa-facebook footer-icon"></i>
+                <i class="fa-brands fa-square-x-twitter footer-icon"></i>
+            </div>
+        </div>
+
+    </footer>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="detail.html"><i class="fa-solid fa-star"></i></a></li>
+            <li><a href="recent.html"><i class="fa-solid fa-list-check"></i></a></li>
+            <li><a href="review.html"><i class="fa-solid fa-glasses"></i></a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li>
+            <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+
+    <script src="../main/main.js"></script>
+    <script src="https://kit.fontawesome.com/63ed2924ae.js" crossorigin="anonymous"></script>
+
+   </body>
+</html>
